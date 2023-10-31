@@ -1,0 +1,16 @@
+cd /home/pnagibin/netology/09-ci-03-cicd/sonar-scanner-5.0.1.3006-linux/bin
+export PATH=$(pwd):$PATH
+sonar-scanner --version
+
+sonar-scanner \
+  -Dsonar.projectKey=project01 \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://158.160.15.8:9000 \
+  -Dsonar.login=4dad31c91189f14051e48af446a2be9860d4c87b \
+  -Dsonar.coverage.exclusions=fail.py
+
+cd /home/pnagibin/netology/09-ci-03-cicd/apache-maven-3.9.5/bin
+  export PATH=$(pwd):$PATH
+
+  /home/pnagibin/netology/09-ci-03-cicd/mvn
+  mvn package
